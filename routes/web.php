@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 
-use App\Http\Controllers\ProductController;
+//use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,11 +18,11 @@ use App\Http\Controllers\ProductController;
 //Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category');
 
 
-  
-Route::resource('products', ProductController::class);
 
-Route::get('/', [App\Http\Controllers\PageController::class, 'index'])->name('pages.home');
+Route::resource('products',App\Http\Controllers\ProductController::class);
 
-Auth::routes();
+Route::get('/', [App\Http\Controllers\PageController::class, 'index'])->name('home');
+
+//Auth::routes();
 
 
