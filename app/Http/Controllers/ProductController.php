@@ -16,7 +16,7 @@ class ProductController extends Controller
     {
         $products = Product::latest()->paginate(5);
        // dd('products.index');
-        return view('products.index',compact('products'))
+        return view('products.index', compact('products'))//The compact() function creates an array from variables and their values.
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
      
@@ -99,8 +99,8 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
+       // dd($product->id);
         $product->delete();
-    
         return redirect()->route('products.index')
                         ->with('success','Product deleted successfully');
     }

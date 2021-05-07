@@ -15,14 +15,14 @@ use App\Http\Controllers\PostController;
 |
 */
 
-//Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category');
 
 
 
-Route::resource('products',App\Http\Controllers\ProductController::class);
+Route::resource('/categories',App\Http\Controllers\CategoryController::class);
+Route::resource('/products',App\Http\Controllers\ProductController::class);
 
 Route::get('/', [App\Http\Controllers\PageController::class, 'index'])->name('home');
 
-//Auth::routes();
+Auth::routes();
 
 

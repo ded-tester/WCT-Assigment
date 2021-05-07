@@ -1,22 +1,21 @@
-<nav class="navbar navbar-expand-lg n" id="mainNav">
+<nav class="navbar navbar-expand-lg  bg-light " id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Start Bootstrap</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
+      <a class="navbar-brand" href="{{route('home')}}">Week11</a>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">        
+            <a class="navbar-brand"  href="{{route('home')}}">Home</a>
+          </li>       
           <li class="nav-item">
-          
-            <a class="nav-link" href="{{url('home')}}">Home</a>
+            <a class="navbar-brand"  href="{{route('products.index')}}">Products</a>
           </li>
-        
           <li class="nav-item">
-         
-            <a class="nav-link" href="{{route('products.index')}}">Products</a>
+            <a class="navbar-brand"  href="#">Login</a>
           </li>
-    
+          <li class="nav-item">
+            <a class="navbar-brand"  href="#">Register</a>
+          </li>
         </ul>
      </div>
      
